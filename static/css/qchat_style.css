@@ -1,0 +1,99 @@
+@import url(../css/com_style.css);
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    .guide{
+        margin: 0px 100px 50px 100px;
+        font-size: 27px;
+        /* line-height: 40px; */
+        list-style:circle;
+        .guide1{
+            margin-left: 20px;
+            font-size: 19px;
+            .li{
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+.container-qn{
+    /* position: relative; */
+    /* width: 75%; */
+    margin: 0px 100px 50px 100px;
+    font-size: 19px;
+    line-height: 45px;
+    background-color: rgba(var(--btnhover));
+    border-radius: 5px;
+    padding: 40px;
+    
+    & ol{ /* You can use nested tags, but need to associate it with its parent tag/class using &*/ 
+        margin: 0px;
+    }
+
+    .gen-qns{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        width: 80%;
+        .text-label{
+            display: flex;
+            /* justify-content: space-between; */
+            width: 75%;
+            & label{
+                width: 120%;
+            }
+        }
+    }
+    
+    .opts{
+        display: flex;
+        width: 40%;
+        margin-bottom: 30px;
+        flex-direction: column;
+        /* fle */
+        & li{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style:lower-alpha;
+            & input[type='radio']{
+                all: unset;
+                border-radius: 5px;
+                border: 2px solid var(--blue);
+                background-color: white;
+                /* box-shadow: 1px 1px 0px transparent; */
+                transition: 100ms ease; 
+                width: 20px;
+                height: 20px;
+                box-sizing: border-box;
+                outline: 1px solid transparent;
+                outline-offset: 3px;
+                transform-origin: center;
+                &:hover{
+                    background-color: var(--btnhover);
+                    border-color: rgba(var(--rosered));
+                    /* box-shadow: 1px 1px 0px rgba(var(--rosered)); */
+                }
+                &:checked{
+                    transform: scale(0.75);
+                    background-color: rgba(var(--rosered));
+                    border-color: rgba(var(--rosered));    
+                    outline: 2px solid rgba(var(--rosered));
+                }
+            }
+        }
+    } 
+}
+
+.content{
+    padding-bottom: 50px;
+}
+.submit{
+    width: 25%;
+    display: table;
+    margin: 0 auto;
+}

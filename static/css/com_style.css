@@ -1,0 +1,145 @@
+:root{
+    /* margins */
+    --main_margin: 50px 200px 50px 200px;
+
+    /* Colors */
+    --blue: #14A6DA;
+    --dblue: #0566C5;
+    --rosered: 243, 93, 88;
+    --btnidle: #effbff80;
+    --btnhover: 255, 224, 224, 0.402;
+    --textgrey: #353535;
+    --web_bg: #e8f9ff;
+    font-family: 'Jost';
+
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('../../Assets/Fonts/Jost/static/Jost-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    background-color: var(--web_bg);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin: var(--main_margin);
+    color: #353535;
+    background-color: white;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    overflow: hidden; 
+    position: static;
+    /* padding: 0 200px 0 200px; */
+    background-color: #5FD5FF;
+    height: 90px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 1px rgba(var(--rosered), 0.6);
+    .logo{
+        margin-left: 200px;
+    }
+    #hover{
+        position: absolute;
+        opacity: 0;
+        transition: 150ms ease-in-out;
+        &:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+    .navItems{
+        display: flex;
+        margin-right: 200px;
+        justify-content: space-between;
+        width: 27%;
+        .navItem{
+            font-family: 'Jost';
+            font-size: 19px;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            text-underline-offset: 5px;
+            color: white;
+            text-shadow: 1px 1px 4px #3535353A;
+            transition: 150ms ease-in-out;
+        
+            &:hover{
+                color: var(--dblue);
+                text-shadow: none;
+                text-decoration: underline;
+                text-decoration-color: var(--dblue);
+
+            }
+        }
+    }
+}
+
+button{
+    font-family: inherit;
+    font-size: 21px;
+    border-radius: 5px;
+    border: 1.5px solid var(--blue);
+    background: var(--btnidle);
+    color: var(--blue);
+    padding: 10px 30px 10px 30px;   
+    transition: 150ms ease-in-out;
+    
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.03);
+        color: rgba(var(--rosered));
+        border-color: rgba(var(--rosered));
+        background: rgba(var(--btnhover));
+    }
+}
+
+hr, .separator{
+    width: 100%;
+    border: 1px dashed var(--textgrey);
+    opacity: 0.4;
+    margin: 0px 0px 50px 0px;
+}
+
+select, input[type="text"]{
+    /* all: unset; */
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+    color: var(--blue);
+    padding: 2px;
+    border-bottom: 2px solid var(--blue);
+    transition: 150ms ease;
+    background-color: white;
+
+    padding: 0px 5px 0px 5px;    
+
+}
+
+ol{
+    margin: 0px;
+    padding: 0px;
+}
+
+.heading{
+    margin: 50px 50px 50px 50px;
+    text-align: center;
+    font-size: 39px;
+}
+.what1{
+    color: var(--blue);
+}
+.what2{
+    color: rgba(var(--rosered));
+}

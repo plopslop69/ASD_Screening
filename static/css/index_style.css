@@ -1,0 +1,64 @@
+@import url(com_style.css);
+
+.content{
+    .welcome-wrap{
+        width: 100%;
+        background-image: url(../../Assets/welcome.jpg);
+        background-repeat: no-repeat;
+        background-position: -200px -260px;
+        background-size: 2500px;
+        /* opacity: 0.5; */
+        .welcome{
+            line-height: normal;
+            font-size: 49px;
+            margin: 40px;
+            
+            
+            .welcomep{
+                font-size: 21px;
+            }
+        }
+    }
+}
+
+.overview{
+    background-color: rgb(251, 231, 230);
+    padding: 50px;
+    font-size: 36px;
+    text-align: center;
+    .topic{
+        .what1{
+            text-decoration: none;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+    }
+    .ov{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        & section{
+            text-align: left;
+            width: 70%;
+            font-size: 21px;
+            line-height: 40px;
+            & li{
+                margin-left: 30px;
+                & section{
+                    font-size: 18px;
+                    margin-left: 30px;
+                }
+            }
+            & a{
+                color: var(--blue);
+                font-size: 18px;
+                &:visited{
+                    color: var(--blue);
+                }
+            }
+        }
+    }
+}
+
+
+

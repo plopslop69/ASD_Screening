@@ -1,0 +1,22 @@
+@import url(../css/com_style.css);
+
+.faq{
+    margin: 0px 100px 50px 100px;
+    background-color: var(--web_bg);
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 21px;
+    & ol{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .faq-card{
+            background-color: rgba(var(--rosered), 0.6);
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 5px;
+            color: white;
+        }
+    }
+}
